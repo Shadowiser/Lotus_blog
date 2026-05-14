@@ -1,3 +1,25 @@
+<?php
+
+session_start();
+require_once("./config/config.php");
+if (isset($_POST['register'])) {
+    $nom = htmlspecialchars($_POST["nom"]);
+    $email = htmlspecialchars($_POST["email"]);
+    $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+    $checmail = $conn->query("SELECT email FROM users WHERE email = '$email' ");
+    if ($checmail->num_rows > 0) {
+        $_SESSION["register_error"] = "Mail déjà enregistré";
+    } else {
+        $conn->query("INSERT INTO users (nom,email,password) VALUES ('$nom','$email','$password')");
+        header("Location: login_register.php");
+    }
+}
+
+if (isset($_POST["login"])) {
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
