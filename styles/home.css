@@ -1,0 +1,47 @@
+:root {
+  --white: #fff8f6;
+  --nectar: #ffd94c;
+  --pink: #f1c6d2;
+  --green: #3f6a3b;
+  --dark-blue: #1a2f2c;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 15px 0;
+  background-color: var(--white);
+}
+.main-title {
+  font-size: 3rem;
+  color: var(--dark-blue);
+  margin-bottom: 20px;
+}
+.lotus {
+  color: var(--pink);
+}
+.desc-text {
+  font-size: 1.5rem;
+  color: var(--green);
+  margin-bottom: 10px;
+}
+.cta-btn {
+  padding: 10px 20px;
+  background-color: var(--green);
+  color: var(--nectar);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.cta-btn:hover {
+  background-color: var(--dark-blue);
+}

@@ -10,3 +10,143 @@
   padding: 0;
   margin: 0;
 }
+body {
+  font-family: "Arial", sans-serif;
+  background-color: var(--white);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/*************** navbar *******************/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--dark-blue);
+  box-shadow: 0 8px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.logo-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+}
+.logo-text {
+  font-size: 1.5rem;
+  color: var(--pink);
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+.nav-link {
+  font-size: 1.2rem;
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.nav-link:hover {
+  color: var(--nectar);
+  transform: scale(1.1);
+}
+.post-btn {
+  padding: 8px 16px;
+  background-color: var(--nectar);
+  color: var(--dark-blue);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.post-btn:hover {
+  background-color: var(--pink);
+}
+
+/*************** footer *******************/
+.site-footer {
+  background-color: var(--dark-blue);
+  border-top: 2px solid var(--green);
+  padding: 30px 20px 20px;
+  margin-top: auto;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 248, 246, 0.1);
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-logo-text {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--pink);
+  letter-spacing: 1px;
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  color: rgba(255, 248, 246, 0.5);
+}
+
+.footer-nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-link {
+  font-size: 0.95rem;
+  color: var(--white);
+  text-decoration: none;
+  opacity: 0.75;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
+}
+
+.footer-link:hover {
+  opacity: 1;
+  color: var(--nectar);
+}
+
+.footer-legal {
+  display: flex;
+  align-items: flex-end;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: rgba(255, 248, 246, 0.35);
+  margin-top: 16px;
+  text-align: center;
+}

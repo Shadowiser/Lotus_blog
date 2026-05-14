@@ -1,0 +1,226 @@
+:root {
+  --white: #fff8f6;
+  --nectar: #ffd94c;
+  --pink: #f1c6d2;
+  --green: #3f6a3b;
+  --dark-blue: #1a2f2c;
+}
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap");
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--dark-blue);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---- fond décoratif ---- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 60% 50% at 20% 30%,
+      rgba(63, 106, 59, 0.18) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 80% 70%,
+      rgba(241, 198, 210, 0.12) 0%,
+      transparent 70%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ---- layout ---- */
+.auth-main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  padding: 40px 16px;
+}
+
+/* ---- branding ---- */
+.auth-brand {
+  text-align: center;
+}
+
+.auth-logo-text {
+  font-family: "DM Serif Display", serif;
+  font-size: 2.8rem;
+  color: var(--pink);
+  letter-spacing: 1px;
+  display: block;
+  line-height: 1;
+}
+
+.auth-tagline {
+  font-size: 0.9rem;
+  color: rgba(255, 248, 246, 0.45);
+  margin-top: 6px;
+}
+
+/* ---- carte centrale ---- */
+.auth-wrapper {
+  background-color: var(--white);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* ---- onglets ---- */
+.auth-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 2px solid rgba(63, 106, 59, 0.15);
+}
+
+.tab-btn {
+  padding: 14px 0;
+  background: none;
+  border: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(26, 47, 44, 0.45);
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+}
+
+.tab-btn.active {
+  color: var(--green);
+  border-bottom-color: var(--green);
+}
+
+.tab-btn:hover:not(.active) {
+  color: var(--dark-blue);
+}
+
+/* ---- boîtes de formulaire ---- */
+.form-box {
+  display: none;
+  padding: 28px 32px 32px;
+  animation: fadeIn 0.22s ease;
+}
+
+.form-box.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- champs ---- */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.field label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--dark-blue);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.field input {
+  padding: 11px 14px;
+  border: 1.5px solid rgba(63, 106, 59, 0.25);
+  border-radius: 8px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  color: var(--dark-blue);
+  background-color: #fff;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.field input::placeholder {
+  color: rgba(26, 47, 44, 0.3);
+}
+
+.field input:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(63, 106, 59, 0.12);
+}
+
+/* ---- lien mot de passe oublié ---- */
+.forgot-link {
+  display: block;
+  text-align: right;
+  font-size: 0.82rem;
+  color: var(--green);
+  text-decoration: none;
+  margin: -8px 0 18px;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+
+.forgot-link:hover {
+  opacity: 1;
+}
+
+/* ---- bouton principal ---- */
+.submit-btn {
+  width: 100%;
+  padding: 13px;
+  margin-top: 6px;
+  background-color: var(--green);
+  color: var(--nectar);
+  border: none;
+  border-radius: 8px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--dark-blue);
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* ---- responsive ---- */
+@media (max-width: 460px) {
+  .form-box {
+    padding: 22px 20px 26px;
+  }
+
+  .auth-logo-text {
+    font-size: 2.2rem;
+  }
+}
