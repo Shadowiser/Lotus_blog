@@ -116,7 +116,13 @@ body::before {
   padding: 28px 32px 32px;
   animation: fadeIn 0.22s ease;
 }
-
+.error-message {
+  color: var(--pink);
+  text-align: center;
+  font-size: 0.82rem;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
 .form-box.active {
   display: block;
 }
