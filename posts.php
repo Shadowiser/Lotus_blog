@@ -13,18 +13,36 @@ $result = $conn->query("SELECT * FROM posts");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lotus - Posts</title>
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/posts.css">
 </head>
 
 <body>
     <?php require("./includes/header.php");
     echo showHeader("./src/images/logo.png");
     ?>
+    <h1 class="page-title">Tout les posts</h1>
     <main>
-        <div class="post-box">
+        <div class="posts-container">
             <?php
             if ($result->num_rows > 0) {
                 while ($post = $result->fetch_assoc()) {
-                    echo "<h1>{$post['titre']}</h1>";
+
+                    echo "
+                     <div class='post-card'>
+                        <div class='post-header'>
+                            <img class='lotus-icon' src='./src/images/lotus_icon.png' alt='lotus_icon'/>
+                            <h2 class='post-title'>{$post['titre']}</h2>
+                        </div>
+                     
+                        <p class='post-content'>{$post['contenu']}</p>
+
+                        <div class='post-footer'>
+                            <p class='posted-by'>Publié par: </p>
+                            <img src='./src/images/empty_like.png' class='like active' alt='like'/>
+                        </div>
+                     </div>
+                    
+                    ";
                 }
             } else {
                 $_SESSION["post_warning"] = "Aucun post pour le moment";

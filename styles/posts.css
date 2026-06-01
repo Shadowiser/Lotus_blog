@@ -1,0 +1,71 @@
+:root {
+  --white: #fff8f6;
+  --nectar: #ffd94c;
+  --pink: #f1c6d2;
+  --green: #3f6a3b;
+  --dark-blue: #1a2f2c;
+}
+.page-title {
+  font-size: 2em;
+  color: var(--dark-blue);
+  text-align: center;
+  margin: 20px 0;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.posts-container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  place-items: center;
+  grid-gap: 20px;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 20px;
+  margin: 10px;
+  justify-content: center;
+}
+.post-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--white);
+  border: 1px solid var(--nectar);
+  border-radius: 10px;
+  width: 50%;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.post-title {
+  font-size: 1.5em;
+  color: var(--dark-blue);
+}
+.post-content {
+  font-size: 1em;
+  color: var(--dark-blue);
+  margin-bottom: 10px;
+  text-align: center;
+}
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.lotus-icon {
+  width: 30px;
+  height: 30px;
+}
+.like {
+  width: 100px;
+  height: 100px;
+}
