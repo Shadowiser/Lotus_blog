@@ -37,6 +37,7 @@ if ($exists->num_rows == 0) {
             <ul class="nav-links">
                 <li><a href="index.php" class="nav-link">Accueil</a></li>
                 <li><a href="posts.php" class="nav-link">Posts</a></li>
+                <li><a href="profil.php" class="nav-link">Profil</a></li>
                 <li><a href="logout.php"><button class="disconnect-btn">Se déconnecter</button></a></li>
             </ul>
         </nav>

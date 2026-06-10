@@ -35,8 +35,9 @@ main {
   background-color: var(--white);
   border: 1px solid var(--nectar);
   border-radius: 10px;
-  width: 50%;
+  width: 100%;
   padding: 20px;
+  gap: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .post-header {
@@ -62,10 +63,24 @@ main {
   gap: 10px;
 }
 .lotus-icon {
-  width: 30px;
-  height: 30px;
+  width: 80px;
+  height: 80px;
+}
+.posted-by {
+  color: var(--green);
 }
 .like {
-  width: 100px;
-  height: 100px;
+  width: 25px;
+  height: 25px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.like:hover {
+  transform: scale(1.2);
+}
+.like:active {
+  transform: scale(0.9);
+}
+.post-numbers {
+  color: var(--green);
 }

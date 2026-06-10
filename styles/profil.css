@@ -1,0 +1,32 @@
+:root {
+  --white: #fff8f6;
+  --nectar: #ffd94c;
+  --pink: #f1c6d2;
+  --green: #3f6a3b;
+  --dark-blue: #1a2f2c;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.welcome-text {
+  font-size: 2em;
+  color: var(--dark-blue);
+  text-align: center;
+  margin: 20px 0;
+}
+.my-posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 20 0;
+  gap: 20px;
+}
+.your-posts-text {
+  font-size: 1.2em;
+  color: var(--dark-blue);
+  text-align: center;
+  margin: 20px 0;
+}

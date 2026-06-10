@@ -7,6 +7,7 @@
     <title>Lotus-Accueil</title>
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/posts.css">
 </head>
 
 <body>
@@ -19,7 +20,13 @@
             <p class="desc-text">Le réseaux social convivial </p>
             <a href="dashboard.php"><button class="cta-btn">Poster un lotus</button></a>
         </div>
-        <div id="last-posts"></div>
+        <div id="all-posts">
+            <?php
+
+            require("./includes/GetPost.php");
+
+            ?>
+        </div>
     </main>
     <?php require("./includes/footer.php");
     echo showFooter();

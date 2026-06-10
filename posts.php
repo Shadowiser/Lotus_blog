@@ -1,10 +1,3 @@
-<?php
-session_start();
-require("./config/config.php");
-$result = $conn->query("SELECT * FROM posts");
-
-
-?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -24,29 +17,7 @@ $result = $conn->query("SELECT * FROM posts");
     <main>
         <div class="posts-container">
             <?php
-            if ($result->num_rows > 0) {
-                while ($post = $result->fetch_assoc()) {
-
-                    echo "
-                     <div class='post-card'>
-                        <div class='post-header'>
-                            <img class='lotus-icon' src='./src/images/lotus_icon.png' alt='lotus_icon'/>
-                            <h2 class='post-title'>{$post['titre']}</h2>
-                        </div>
-                     
-                        <p class='post-content'>{$post['contenu']}</p>
-
-                        <div class='post-footer'>
-                            <p class='posted-by'>Publié par: </p>
-                            <img src='./src/images/empty_like.png' class='like active' alt='like'/>
-                        </div>
-                     </div>
-                    
-                    ";
-                }
-            } else {
-                $_SESSION["post_warning"] = "Aucun post pour le moment";
-            }
+            require("./includes/GetPost.php")
             ?>
         </div>
     </main>
