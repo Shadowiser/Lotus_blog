@@ -5,8 +5,10 @@ $result = $conn->query("SELECT posts.titre, posts.contenu, users.nom AS author
 FROM posts
 JOIN users
 ON posts.user_id = users.id");
+
 if ($result->num_rows > 0) {
     while ($post = $result->fetch_assoc()) {
+        $auteur = strtoupper($post['author']);
 
         echo "
                      <div class='post-card'>
@@ -18,7 +20,7 @@ if ($result->num_rows > 0) {
                         <p class='post-content'>{$post['contenu']}</p>
 
                         <div class='post-footer'>
-                            <p class='posted-by'>Publié par:{$post['author']} </p>
+                            <p class='posted-by'>Publié par : {$auteur} </p>
                             <img src='./src/images/empty_like.png' class='like active' alt='like'/>
                         </div>
                      </div>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$nom = $_SESSION["nom"];
+$nom = strtoupper($_SESSION["nom"]);
 
 ?>
 <!DOCTYPE html>

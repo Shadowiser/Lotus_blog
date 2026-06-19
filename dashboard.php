@@ -8,7 +8,7 @@ if (!isset($_SESSION["email"])) {
 }
 
 $email = $_SESSION["email"];
-$nom = $_SESSION["nom"];
+$nom = strtoupper($_SESSION["nom"]);
 $exists = $conn->query("SELECT * FROM users WHERE email = '$email'");
 
 if ($exists->num_rows == 0) {
@@ -24,7 +24,7 @@ if ($exists->num_rows == 0) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tableau de bord de </title>
+    <title>Tableau de bord de {$nom} </title>
     <link rel="stylesheet" href="./styles/dashboard.css">
 </head>
 
@@ -46,7 +46,7 @@ if ($exists->num_rows == 0) {
 <main>
     <?php
     if (isset($_SESSION["nom"])) {
-        $nom = $_SESSION["nom"];
+        $nom = strtoupper($_SESSION["nom"]);
     }
     echo "<h1 class='hi-text'>Bonjour $nom</h1>"
 

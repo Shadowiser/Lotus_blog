@@ -10,6 +10,9 @@
   padding: 0;
   margin: 0;
 }
+a {
+  text-decoration: none;
+}
 .welcome-text {
   font-size: 2em;
   color: var(--dark-blue);
@@ -29,4 +32,32 @@
   color: var(--dark-blue);
   text-align: center;
   margin: 20px 0;
+}
+.action-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.update-post,
+.delete-post {
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.update-post img,
+.delete-post img {
+  width: 20px;
+  height: 20px;
+}
+.delete-post {
+  background-color: var(--nectar);
+  color: var(--dark-blue);
 }
